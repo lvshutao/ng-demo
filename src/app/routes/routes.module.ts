@@ -3,11 +3,13 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 import { routes } from './routes';
+import { PageModule } from '../views/public/page.module';
 
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forRoot(routes, { useHash: true }),
+        PageModule,
+        RouterModule.forRoot(routes, { useHash: true })
     ],
     declarations: [],
     exports: [

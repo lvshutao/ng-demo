@@ -1,6 +1,8 @@
 import { LayoutComponent } from '../views/frontend/layout/layout.component';
 import { LayoutComponent as AdminLayoutComponent } from '../views/backend/layout/layout.component';
 
+import { RegisterComponent } from '../views/public/register/register.component';
+
 export const routes = [
     {
         path: '',
@@ -17,6 +19,9 @@ export const routes = [
         children: [
             { path: '', loadChildren: '../views/backend/backend.module#BackendModule' }
         ]
+    },
+    {
+        path: 'register', component: RegisterComponent
     },
     { path: '**', redirectTo: 'f' }
 ];

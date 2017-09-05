@@ -1,13 +1,12 @@
-
-// 通常命名为 xxx-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { AdminComponent } from './admin/admin.component';
+import { CanAuthGuardProvide } from '../../core/guard/can-auth.provide';
 
 const routes: Routes = [
     {
-        path: '', component: AdminComponent
+        path: '', component: AdminComponent, canActivate: [CanAuthGuardProvide]
     }
 ];
 
