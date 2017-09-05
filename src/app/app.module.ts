@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
+
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { RoutesModule } from './routes/routes.module';
+import { LayoutModule } from './views/frontend/layout/layout.module';
+import { LayoutModule as AdminLayoutModule } from './views/backend/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -12,10 +15,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     BrowserAnimationsModule,
-    NgZorroAntdModule.forRoot({ extraFontName: 'anticon', extraFontUrl: './assets/fonts/iconfont' })
+    CoreModule,
+    SharedModule,
+    RoutesModule,
+    LayoutModule,
+    AdminLayoutModule
   ],
   bootstrap: [AppComponent]
 })
