@@ -9,6 +9,7 @@ import { CanLeaveGuardProvide } from './leave/can-leave.provide';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
+    // todo 离开确认页示例
     { path: 'leave', component: LeaveComponent, canDeactivate: [CanLeaveGuardProvide] }
 ];
 

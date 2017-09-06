@@ -5,9 +5,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-// import { AngularWebStorageModule } from 'angular-web-storage';
+import { AngularWebStorageModule } from 'angular-web-storage';
 // import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-// import { TranslateModule } from "@ngx-translate/core";
+import { TranslateModule } from '@ngx-translate/core';
 // import { ChartsModule } from 'ng2-charts/ng2-charts';
 // other service, pipe, directive
 
@@ -17,7 +17,7 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        // AngularWebStorageModule,
+        AngularWebStorageModule,
         NgZorroAntdModule.forRoot({ extraFontName: 'anticon', extraFontUrl: './assets/fonts/iconfont' })
         // PerfectScrollbarModule,
         // ChartsModule
@@ -30,13 +30,18 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
         ReactiveFormsModule,
         NgZorroAntdModule,
         RouterModule,
-        // AngularWebStorageModule,
+        AngularWebStorageModule,
         // PerfectScrollbarModule,
-        // TranslateModule,
+        TranslateModule,
         // ChartsModule,
         // other directives, pipes
     ]
 })
 // 将此模块添加到 app.module.ts @NgModule imports 中
 export class SharedModule {
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: SharedModule
+        };
+    }
 }

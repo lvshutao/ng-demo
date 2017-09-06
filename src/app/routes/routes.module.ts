@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
+import { TranslatorService } from '../core/translator/translator.service';
+
 import { routes } from './routes';
 import { PageModule } from '../views/public/page.module';
 
@@ -17,4 +19,9 @@ import { PageModule } from '../views/public/page.module';
     ]
 })
 
-export class RoutesModule { }
+export class RoutesModule {
+    constructor(tr: TranslatorService) {
+        // 调整语言
+        tr.use('en');
+    }
+}
