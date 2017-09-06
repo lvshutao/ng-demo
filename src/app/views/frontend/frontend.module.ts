@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { FrontendRoutingModule } from './frontend-routing.module';
 import { HomeComponent } from './home/home.component';
+import { LeaveComponent } from './leave/leave.component';
+
+import { CanLeaveGuardProvide } from './leave/can-leave.provide';
 
 @NgModule({
     imports: [
@@ -11,8 +14,11 @@ import { HomeComponent } from './home/home.component';
         FormsModule,
         FrontendRoutingModule
     ],
-    declarations: [HomeComponent],
-    providers: []
+    declarations: [
+        HomeComponent,
+        LeaveComponent
+    ],
+    providers: [CanLeaveGuardProvide]
 })
 
 export class FrontendModule { }
