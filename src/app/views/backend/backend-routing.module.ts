@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
-import { AdminComponent } from './admin/admin.component';
+
 import { CanAuthGuardProvide } from '../../core/guard/can-auth.provide';
+import { CanAdminGuardProvide } from '../../core/guard/can-admin.provide';
+
+import { ManageComponent } from './manage/manage.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
     {
-        path: '', component: AdminComponent, canActivate: [CanAuthGuardProvide]
+        // 需要用户登录才能访问
+        path: '', component: ManageComponent, canActivate: [CanAuthGuardProvide]
+    }, {
+        // 需要管理员权限才能访问
+        path: 'admin', component: AdminComponent, canActivate: [CanAdminGuardProvide]
     }
 ];
 

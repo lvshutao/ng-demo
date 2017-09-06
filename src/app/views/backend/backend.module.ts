@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { BackendRoutingModule } from './backend-routing.module';
 import { AdminComponent } from './admin/admin.component';
+import { ManageComponent } from './manage/manage.component';
 
 
 
@@ -13,7 +14,10 @@ import { AdminComponent } from './admin/admin.component';
         FormsModule,
         BackendRoutingModule
     ],
-    declarations: [ AdminComponent],
+    declarations: [
+        AdminComponent,
+        ManageComponent
+    ],
     providers: []
 })
 

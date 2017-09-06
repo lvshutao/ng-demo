@@ -3,6 +3,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { UserService } from './guard/user.service';
 import { CanAuthGuardProvide } from './guard/can-auth.provide';
+import { CanAdminGuardProvide } from './guard/can-admin.provide';
 
 import { SettingsService } from './settings/settings.service';
 
@@ -11,7 +12,7 @@ import { SettingsService } from './settings/settings.service';
         SharedModule
     ],
     providers: [
-        UserService, CanAuthGuardProvide, SettingsService
+        UserService, CanAuthGuardProvide, SettingsService, CanAdminGuardProvide
     ],
     declarations: [],
     exports: []

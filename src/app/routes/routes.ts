@@ -14,7 +14,7 @@ export const routes = [
         ]
     },
     {
-        path: 'admin',
+        path: 'backend',
         component: AdminLayoutComponent,
         children: [
             { path: '', loadChildren: '../views/backend/backend.module#BackendModule' }
