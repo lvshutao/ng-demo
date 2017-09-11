@@ -1,32 +1,15 @@
 <nz-layout>
-  <nz-header style="background:white;">
-    <a routerLink="/backend" routerLinkActive="active">后台管理</a>
-    <a routerLink="/register" routerLinkActive="active">注册</a>
 
-    <nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
-      <div class="item" nz-dropdown>
-        <i class="anticon anticon-setting"></i>
-      </div>
-      <ul nz-menu class="pt-sm pb-sm width-sm" style="width:200px">
-        <li nz-menu-item>
-          <div title>
-            <nz-dropdown>
-              <div nz-dropdown>
-                <i class="anticon anticon-edit"></i> {{ 'language' | translate}}
-                <i class="anticon anticon-down"></i>
-              </div>
-              <ul nz-menu>
-                <li nz-menu-item *ngFor="let item of tsServ.langs" [nzSelected]="item.code === settings.layout.lang" (click)="changeLang(item.code)">{{item.text}}</li>
-              </ul>
-            </nz-dropdown>
-          </div>
-        </li>
-      </ul>
-    </nz-dropdown>
-
+  <nz-header>
+    <app-header></app-header>
   </nz-header>
-  <nz-content>
+
+  <nz-content style="background:#fff; padding: 24px; min-height: 280px;">
     <router-outlet></router-outlet>
   </nz-content>
-  <nz-footer>Footer</nz-footer>
+
+  <nz-footer>
+    <app-footer></app-footer>
+  </nz-footer>
+
 </nz-layout>

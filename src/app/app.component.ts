@@ -13,9 +13,9 @@ export class AppComponent {
   constructor(
     private settings: SettingsService, tsServ: TranslatorService
   ) {
-    // setTimeout(function () {
-    tsServ.use(settings.layout.lang);
-    // }, 500);
+    setTimeout(function () {
+      tsServ.use(settings.layout.lang);
+    }, 500);
   }
 
 }

@@ -1,0 +1,8 @@
+.ant-layout-header {
+  padding: 0 0 0 10px;
+}
+
+.ant-layout-footer {
+  border-top: 1px solid gray;
+  padding: 10px 40px;
+}

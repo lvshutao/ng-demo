@@ -1,0 +1,19 @@
+<div nz-row style="text-align: center;">
+  <div nz-col [nzSpan]="8">
+
+  </div>
+  <div nz-col [nzSpan]="8">
+    Make in China!
+  </div>
+  <div nz-col [nzSpan]="8" style="text-align:right;">
+    <nz-dropdown nzPlacement="topLeft">
+      <div class="item" nz-dropdown>
+        <button nz-button nz-dropdown><i class="anticon anticon-global"></i></button>
+      </div>
+
+      <ul nz-menu>
+        <li nz-menu-item *ngFor="let item of tsServ.langs" [nzSelected]="item.code === settings.layout.lang" (click)="changeLang(item.code)">{{item.text}}</li>
+      </ul>
+    </nz-dropdown>
+  </div>
+</div>

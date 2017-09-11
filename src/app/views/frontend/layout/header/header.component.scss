@@ -1,0 +1,24 @@
+:host ::ng-deep .logo {
+  width: 160px;
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.ant-menu-horizontal>.ant-menu-item,
+.ant-menu-horizontal>.ant-menu-submenu {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    padding: 0 10px;
+  }
+}
