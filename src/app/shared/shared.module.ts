@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { AngularWebStorageModule } from 'angular-web-storage';
-// import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { TranslateModule } from '@ngx-translate/core';
-// import { ChartsModule } from 'ng2-charts/ng2-charts';
 // other service, pipe, directive
 
 @NgModule({
@@ -19,8 +17,6 @@ import { TranslateModule } from '@ngx-translate/core';
         HttpClientModule,
         AngularWebStorageModule,
         NgZorroAntdModule.forRoot({ extraFontName: 'anticon', extraFontUrl: './assets/fonts/iconfont' })
-        // PerfectScrollbarModule,
-        // ChartsModule
     ],
     providers: [], // any service
     declarations: [], // directives, pipes
@@ -31,10 +27,7 @@ import { TranslateModule } from '@ngx-translate/core';
         NgZorroAntdModule,
         RouterModule,
         AngularWebStorageModule,
-        // PerfectScrollbarModule,
-        TranslateModule,
-        // ChartsModule,
-        // other directives, pipes
+        TranslateModule
     ]
 })
 // 将此模块添加到 app.module.ts @NgModule imports 中

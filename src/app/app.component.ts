@@ -10,10 +10,12 @@ import { TranslatorService } from './core/translator/translator.service';
 })
 export class AppComponent {
 
-  constructor(private settings: SettingsService, tsServ: TranslatorService) {
-    setTimeout(function () {
-      tsServ.use(settings.layout.lang);
-    }, 500);
+  constructor(
+    private settings: SettingsService, tsServ: TranslatorService
+  ) {
+    // setTimeout(function () {
+    tsServ.use(settings.layout.lang);
+    // }, 500);
   }
 
 }
