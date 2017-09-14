@@ -8,4 +8,10 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+const bootstrap = () => {
+  return platformBrowserDynamic().bootstrapModule(AppModule);
+};
+
+bootstrap().then( () => {
+  document.querySelector('.preloader').className += ' preloader-hidden-add preloader-hidden-add-active';
+});
