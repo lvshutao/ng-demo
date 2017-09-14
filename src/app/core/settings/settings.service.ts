@@ -60,6 +60,15 @@ export class SettingsService {
         }
         return false;
     }
+
+    setApp(val: App) {
+        this.app = Object.assign(this.app, val);
+    }
+
+    setUser(val: User) {
+        this.user = Object.assign(this.user, val);
+    }
+
     constructor(private local: LocalStorageService) { }
 
 }
