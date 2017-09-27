@@ -12,6 +12,10 @@ const bootstrap = () => {
   return platformBrowserDynamic().bootstrapModule(AppModule);
 };
 
-bootstrap().then( () => {
-  document.querySelector('.preloader').className += ' preloader-hidden-add preloader-hidden-add-active';
+bootstrap().then(() => {
+  const preloader = document.querySelector('.preloader');
+  preloader.addEventListener('transitionend', function () {
+    preloader.className = 'preloader-hidden';
+  });
+  preloader.className += ' preloader-hidden-add preloader-hidden-add-active';
 });

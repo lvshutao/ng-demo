@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
 
 /**
- * 用于应用启动时，获取应用所需要的基础数据等
+ * todo 用于应用启动时，获取应用所需要的基础数据等
  */
 @Injectable()
 export class StartupService {
