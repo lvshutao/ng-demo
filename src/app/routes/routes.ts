@@ -23,6 +23,6 @@ export const routes = [
     {
         path: 'register', component: RegisterComponent
     },
-    { path: '**', redirectTo: 'f' }
+    { path: '**', redirectTo: '' }
 ];
 // todo 使用 ngrouterootmodule 来创建根路由模块

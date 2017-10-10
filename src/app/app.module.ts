@@ -23,7 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 // 在启动之前发送 ajax 请求，获取数据
 // https://segmentfault.com/a/1190000011064837?_ea=2507831
 export function StartupServiceFactory(startupService: StartupService): Function {
-  return () => { return startupService.load(); }
+  return () => startupService.load();
 }
 
 @NgModule({
